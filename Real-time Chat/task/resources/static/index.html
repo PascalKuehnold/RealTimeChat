@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="login-container">
+         <h1>Login</h1>
+         <form id="login-form">
+              <input type="text" id="input-username" placeholder="Enter your username">
+              <button id="send-username-btn" type="submit">Login</button>
+         </form>
+    </div>
+
+   <div id="chat-container" class="hidden">
+       <section id="user-list">
+           <h3>Users</h3>
+           <ul id="users"></ul>
+       </section>
+       <div class="vertical-separator"></div>
+       <section id="chat-window">
+           <div id="chat-header"><span id="chat-with">Public chat</span><span id="public-chat-btn" class="hidden">Return</span></div>
+           <div id="messages-container">
+               <ul id="messages"></ul>
+           </div>
+           <form id="message-form">
+               <input type="text" id="input-msg" placeholder="Type a message">
+               <button id="send-msg-btn" type="submit">Send</button>
+           </form>
+       </section>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+   <script src="js/script.js"></script>
+    <script src="js/websocketHandler.js"></script>
+
+</body>
+</html>
+
